@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <!-- PARTE IZQUIERDA -->
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <h1>
+                    Bienvenido de<br>
+                    nuevo <span>👋</span>
+                </h1>
+
+                <p>
+                    Inicia sesión para acceder a tu cuenta<br>
+                    y continuar donde lo dejaste.
+                </p>
+
+            </div>
+
+            <!-- Ilustración inferior -->
+            <div class="illustration">
+
+                <div class="plant">
+                    🌿
+                </div>
+
+                <div class="dashboard">
+
+                    <div class="dashboard-top">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+
+                    <div class="dashboard-content">
+
+                        <div class="profile">
+                            <div class="profile-icon"></div>
+
+                            <div class="profile-lines">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="long-line"></div>
+
+                        <div class="charts">
+
+                            <div class="chart">
+                                <div class="chart-line"></div>
+                            </div>
+
+                            <div class="bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                        </div>
+
+                        <div class="bottom-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PARTE DERECHA -->
+        <section class="form-section">
+
+            <div class="login-card">
+
+                <div class="login-header">
+
+                    <h2>Iniciar sesión</h2>
+
+                    <p>
+                        Ingresa tus credenciales para continuar
+                    </p>
+
+                </div>
+
+
+                <form>
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Correo electrónico
+                        </label>
+
+                        <div class="input-container">
+
+                            <svg
+                                class="input-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2">
+
+                                <rect
+                                    x="3"
+                                    y="5"
+                                    width="18"
+                                    height="14"
+                                    rx="2">
+                                </rect>
+
+                                <path d="m3 7 9 6 9-6"></path>
+
+                            </svg>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="ejemplo@correo.com"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTRASEÑA -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Contraseña
+                        </label>
+
+                        <div class="input-container">
+
+                            <svg
+                                class="input-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2">
+
+                                <rect
+                                    x="5"
+                                    y="10"
+                                    width="14"
+                                    height="10"
+                                    rx="2">
+                                </rect>
+
+                                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+
+                            </svg>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Ingresa tu contraseña"
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                onclick="togglePassword()">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2">
+
+                                    <path
+                                        d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z">
+                                    </path>
+
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="2.5">
+                                    </circle>
+
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RECUPERAR CONTRASEÑA -->
+                    <div class="forgot">
+
+                        <a href="#">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+
+                    </div>
+
+
+                    <!-- BOTÓN -->
+                    <button
+                        type="submit"
+                        class="login-button">
+
+                        Iniciar sesión
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function togglePassword() {
+
+            const password =
+                document.getElementById("password");
+
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
